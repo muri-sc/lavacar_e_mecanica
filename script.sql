@@ -25,6 +25,6 @@ CREATE TABLE ordem_servico (
 	descricao VARCHAR(510) NOT NULL,
 	tipo_servico VARCHAR(255) NOT NULL CHECK(tipo_servico IN('manutencao', 'estetica', 'funilaria')),
 	valor NUMERIC(10,2),
-	status VARCHAR(255) NOT NULL CHECK(status IN('abertura', 'andamento', 'encerramento')),
+	status VARCHAR(255) NOT NULL CHECK(status IN('aguardando', 'andamento', 'completo')),
 	veiculo_id INT NOT NULL REFERENCES veiculo(id)
 )
